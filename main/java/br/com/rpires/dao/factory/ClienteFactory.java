@@ -24,6 +24,7 @@ public class ClienteFactory {
 		cliente.setNumero(rs.getInt(("NUMERO")));
 		cliente.setCidade(rs.getString(("CIDADE")));
 		cliente.setEstado(rs.getString(("ESTADO")));
+		cliente.setSexo(rs.getString("SEXO"));
 		return cliente;
 	}
 }
