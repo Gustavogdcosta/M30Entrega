@@ -36,6 +36,7 @@ public class ProdutoDaoMock implements IProdutoDAO {
 	public Produto consultar(String valor) {
 		Produto produto = new Produto();
 		produto.setCodigo(valor);
+		produto.setCor("Azul");
 		return produto;
 	}
 

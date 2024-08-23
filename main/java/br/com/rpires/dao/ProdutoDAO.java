@@ -30,6 +30,7 @@ public class ProdutoDAO extends GenericDAO<Produto, String> implements IProdutoD
 		entityCadastrado.setDescricao(entity.getDescricao());
 		entityCadastrado.setNome(entity.getNome());
 		entityCadastrado.setValor(entity.getValor());
+		entityCadastrado.setCor(entity.getCor());
 	}
 
 	@Override
@@ -47,6 +48,7 @@ public class ProdutoDAO extends GenericDAO<Produto, String> implements IProdutoD
 		stmInsert.setString(2, entity.getNome());
 		stmInsert.setString(3, entity.getDescricao());
 		stmInsert.setBigDecimal(4, entity.getValor());
+		stmInsert.setString(5, entity.getCor());
 	}
 
 	@Override
@@ -77,7 +79,8 @@ public class ProdutoDAO extends GenericDAO<Produto, String> implements IProdutoD
 		stmUpdate.setString(2, entity.getNome());
 		stmUpdate.setString(3, entity.getDescricao());
 		stmUpdate.setBigDecimal(4, entity.getValor());
-		stmUpdate.setString(5, entity.getCodigo());
+		stmUpdate.setString(5, entity.getCor());
+		stmUpdate.setString(6, entity.getCodigo());
 	}
 
 	@Override
